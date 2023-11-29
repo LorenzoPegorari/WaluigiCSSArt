@@ -1,0 +1,607 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(255, 252, 255);
+}
+
+.frame {
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    top: 4vmin;
+    background: #e6e6ff;
+    width: 70vmin;
+    height: 92vmin;
+    border: 0.4vmin solid #000;
+}
+
+.canvas {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    top: 0.3vmin;
+    background: #54146d;
+    width: 68.6vmin;
+    height: 90.6vmin;
+}
+
+.face {
+    position: absolute;
+    top: 28vmin;
+    width: 23vmin;
+    height: 25vmin;
+    background: #ffd4d4;
+    border-radius: 0vmin 0vmin 4vmin 4vmin;
+}
+
+.chin {
+    position: absolute;
+    border-bottom: 12vmin solid #ffd4d4;
+    border-left: 4vmin solid transparent;
+    border-right: 4vmin solid transparent;
+    height: 0;
+    width: 13vmin;
+    top: 50vmin;
+    background: transparent;
+    transform: rotate(180deg);
+}
+
+.chinBottom {
+    position: absolute;
+    width: 5.2vmin;
+    height: 2.8vmin;
+    top: 60.3vmin;
+    background: #ffd4d4;
+    border-radius: 4vmin;
+}
+
+.earsLeftTop {
+    position: absolute;
+    width: 15vmin;
+    height: 5.5vmin;
+    top: 35vmin;
+    left: 14.5vmin;
+    background: #fac8c8;
+    border-radius: 10vmin;
+    transform: rotate(58deg);
+}
+
+.earsRightTop {
+    position: absolute;
+    width: 15vmin;
+    height: 5.5vmin;
+    top: 35vmin;
+    left: 39.2vmin;
+    background: #fac8c8;
+    border-radius: 10vmin;
+    transform: rotate(122deg);
+}
+
+.earsLeftBottom {
+    position: absolute;
+    width: 5vmin;
+    height: 8vmin;
+    top: 37.4vmin;
+    left: 20.8vmin;
+    background: #fac8c8;
+    border-radius: 5vmin;
+    transform: rotate(2deg);
+}
+
+.earsRightBottom {
+    position: absolute;
+    width: 5vmin;
+    height: 8vmin;
+    top: 37.4vmin;
+    left: 42.8vmin;
+    background: #fac8c8;
+    border-radius: 5vmin;
+    transform: rotate(-1deg);
+}
+
+.earsLeftShadow {
+    position: absolute;
+    border-bottom: 13vmin solid #b89090;
+    border-left: 4vmin solid transparent;
+    border-right: 0.6vmin solid transparent;
+    height: 0;
+    width: 5vmin;
+    top: 33.3vmin;
+    left: 20vmin;
+    background: transparent;
+    transform: rotate(-42deg);
+}
+
+.earsRightShadow {
+    position: absolute;
+    border-bottom: 13vmin solid #b89090;
+    border-left: 0.6vmin solid transparent;
+    border-right: 4vmin solid transparent;
+    height: 0;
+    width: 5vmin;
+    top: 33.3vmin;
+    left: 43.6vmin;
+    background: transparent;
+    transform: rotate(42deg);
+}
+
+.eyesLeft {
+    position: absolute;
+    width: 10vmin;
+    height: 6vmin;
+    top: 6vmin;
+    left: 1vmin;
+    background: #f9f9ff;
+    border-radius: 50%;
+    transform: rotate(4deg);
+}
+
+.eyesRight {
+    position: absolute;
+    width: 10vmin;
+    height: 6vmin;
+    top: 6vmin;
+    right: 1vmin;
+    background: #f9f9ff;
+    border-radius: 50%;
+    transform: rotate(-4deg);
+}
+
+.pupilsLeft {
+    position: absolute;
+    width: 2vmin;
+    height: 2vmin;
+    top: 2vmin;
+    left: 6.4vmin;
+    background: #1e1e1f;
+    border-radius: 50%;
+}
+
+.pupilsRight {
+    position: absolute;
+    width: 2vmin;
+    height: 2vmin;
+    top: 2vmin;
+    right: 6.4vmin;
+    background: #1e1e1f;
+    border-radius: 50%;
+}
+
+.lightLeft {
+    position: absolute;
+    width: 0.7vmin;
+    height: 0.7vmin;
+    top: 0.6vmin;
+    left: 0.8vmin;
+    background: #f9f9ff;
+    border-radius: 50%;
+}
+
+.lightRight {
+    position: absolute;
+    width: 0.7vmin;
+    height: 0.7vmin;
+    top: 0.6vmin;
+    right: 0.8vmin;
+    background: #f9f9ff;
+    border-radius: 50%;
+}
+
+.eyebrowsLeft {
+    position: absolute;
+    width: 12vmin;
+    height: 6vmin;
+    top: 5.7vmin;
+    left: 0.2vmin;
+    background: transparent;
+    border-top: 1vmin solid #1e1e1f;
+    border-right: 1vmin solid transparent;
+    border-radius: 50%;
+    transform: rotate(17deg);
+}
+
+.eyebrowsRight {
+    position: absolute;
+    width: 12vmin;
+    height: 6vmin;
+    top: 5.7vmin;
+    left: 11vmin;
+    background: transparent;
+    border-top: 1vmin solid #1e1e1f;
+    border-left: 1vmin solid transparent;
+    border-radius: 50%;
+    transform: rotate(-17deg);
+}
+
+.mouth {
+    position: absolute;
+    width: 18vmin;
+    height: 4.5vmin;
+    top: 17.4vmin;
+    left: 2.5vmin;
+    background: #9b0000;
+    border-radius: 1vmin;
+}
+
+.nose {
+    position: absolute;
+    display: block;
+    width: 5vmin;
+    height: 9vmin;
+    top: 10vmin;
+    left: 9.1vmin;
+    background: #ff66cc;
+    border-radius: 50% 50% 50% 50% / 25% 25% 70% 70%;
+}
+
+.noseSide {
+    position: absolute;
+    display: block;
+    width: 8vmin;
+    height: 4.2vmin;
+    top: 11.5vmin;
+    left: 7.6vmin;
+    background: #f561c4;
+    border-radius: 50% 50% 50% 50% / 90% 90% 50% 50%;
+}
+
+.hatBottom {
+    position: absolute;
+    display: block;
+    width: 24.4vmin;
+    height: 5vmin;
+    top: 30vmin;
+    background: #c000d1;
+    border-radius: 20% 20% 25% 25% / 80% 80% 10% 10%;
+}
+
+.hatTop {
+    position: absolute;
+    display: block;
+    width: 26vmin;
+    height: 18vmin;
+    top: 16vmin;
+    background: #a100b6;
+    border-radius: 70% 70% 50% 50% / 100% 100% 10% 10%;
+}
+
+.logo {
+    position: absolute;
+    width: 10vmin;
+    height: 10vmin;
+    left: 8vmin;
+    top: 6vmin;
+    background: #ffeafe;
+    border-radius: 50%;
+}
+
+.reverseL {
+    position: absolute;
+    width: 4vmin;
+    height: 5.2vmin;
+    top: 2vmin;
+    left: 3.2vmin;
+    background: #fff133;
+    border: 0.2vmin solid #1e1e1f;
+}
+
+.reverseLMask {
+    position: absolute;
+    width: 2.2vmin;
+    height: 3.5vmin;
+    top: 3.7vmin;
+    left: 5vmin;
+    background: #ffeafe;
+    border-left: 0.2vmin solid #1e1e1f;
+    border-top: 0.2vmin solid #1e1e1f;
+}
+
+.moustacheLeftStart {
+    position: absolute;
+    border-bottom: 8.4vmin solid #1e1e1f;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0.6vmin solid transparent;
+    height: 0;
+    width: 2.2vmin;
+    top: 12.7vmin;
+    left: 4.2vmin;
+    background: transparent;
+    transform: rotate(80deg);
+}
+
+.moustacheRightStart {
+    position: absolute;
+    border-bottom: 8.4vmin solid #1e1e1f;
+    border-left: 0.6vmin solid transparent;
+    border-right: 0.3vmin solid transparent;
+    height: 0;
+    width: 2.2vmin;
+    top: 12.7vmin;
+    right: 4.2vmin;
+    background: transparent;
+    transform: rotate(-80deg);
+}
+
+.moustacheLeftEnd {
+    position: absolute;
+    border-bottom: 13vmin solid #1e1e1f;
+    border-left: 1.7vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 1.4vmin;
+    top: 5.3vmin;
+    left: -1.2vmin;
+    background: transparent;
+    transform: rotate(-22deg);
+}
+
+.moustacheRightEnd {
+    position: absolute;
+    border-bottom: 13vmin solid #1e1e1f;
+    border-left: 0vmin solid transparent;
+    border-right: 1.7vmin solid transparent;
+    height: 0;
+    width: 1.4vmin;
+    top: 5.3vmin;
+    right: -1.2vmin;
+    background: transparent;
+    transform: rotate(22deg);
+}
+
+.teeth1 {
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: -0.4vmin;
+    left: 0vmin;
+    background: transparent;
+    transform: rotate(270deg);
+}
+
+.teeth2 {
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: -0.2vmin;
+    left: 2vmin;
+    background: transparent;
+    transform: rotate(270deg);
+}
+
+.teeth3 {
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: 0vmin;
+    left: 4.2vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, 1.1);
+}
+
+.teeth4 {
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: 0.1vmin;
+    left: 6.5vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1.1, 1.2);
+}
+
+.teeth5 {
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: -0.4vmin;
+    right: 0.1vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, -1);
+}
+
+.teeth6 {
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: -0.2vmin;
+    right: 2.2vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, -1);
+}
+
+.teeth7 {
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: 0vmin;
+    right: 4.3vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, -1.1);
+}
+
+.teeth8 {
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0.3vmin solid transparent;
+    border-right: 0vmin solid transparent;
+    height: 0;
+    width: 2vmin;
+    top: 0.1vmin;
+    right: 6.5vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1.1, -1.2);
+}
+
+.teeth9 { 
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.3vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: 0.5vmin;
+    left: -0.3vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, -1);
+}
+
+.teeth10 { 
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.4vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: 0.2vmin;
+    left: 1.7vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, -1);
+}
+
+.teeth11 { 
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.5vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: -0.2vmin;
+    left: 3.8vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, -1.1);
+}
+
+.teeth12 { 
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.4vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: -0.9vmin;
+    left: 6.2vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1.1, -1.2);
+}
+
+.teeth13 { 
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.3vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: 0.5vmin;
+    right: -0.3vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, 1);
+}
+
+.teeth14 { 
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.4vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: 0.2vmin;
+    right: 1.7vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, 1);
+}
+
+.teeth15 { 
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.5vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: -0.2vmin;
+    right: 3.9vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1, 1.1);
+}
+
+.teeth16 { 
+    position: absolute;
+    border-bottom: 2vmin solid #fffde8;
+    border-left: 0vmin solid transparent;
+    border-right: 0.4vmin solid transparent;
+    height: 0;
+    width: 3vmin;
+    bottom: -0.9vmin;
+    right: 6.2vmin;
+    background: transparent;
+    transform: rotate(270deg) scale(1.1, 1.2);
+}
+
+.tongue{
+    position: absolute;
+    overflow: hidden;
+    display: block;
+    width: 5vmin;
+    height: 9vmin;
+    top: 1.7vmin;
+    left: 6.5vmin;
+    background: #c70175;
+    border-radius: 50% 50% 50% 50% / 10% 10% 70% 70%;
+}
+
+.body { 
+    position: absolute;
+    overflow: hidden;
+    border-bottom: 40vmin solid #a402b9;
+    border-left: 4vmin solid transparent;
+    border-right: 4vmin solid transparent;
+    height: 0;
+    width: 28vmin;
+    bottom: 0vmin;
+    background: transparent;
+}
+
+.finalText{
+    position: absolute;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 15vmin;
+    letter-spacing: -2.5px;
+    color: #fff133;
+    font-weight: bolder;
+    font-style: normal;
+    font-variant: small-caps;
+    text-shadow: 0.7vmin 0.7vmin 0 #000;
+    background: transparent;
+    height: 12vmin;
+    bottom: 8vmin;
+}
